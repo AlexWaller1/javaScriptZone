@@ -52,9 +52,11 @@ function onSubmit(e) {
     <br />
   </form>
   <br>
-  <button id="question-1-button" type="button" class="btn btn-light">
+  <button id="question-1-button" type="button" onclick="onSubmit2()" class="btn btn-light">
         Next Question
       </button>
+      <br>
+      <br>
     `;
 }
 
@@ -62,9 +64,7 @@ const q1Button = document.getElementById("question-1-button");
 console.log(q1Button);
 const secondQuestionDiv = document.getElementById("second-question-div");
 
-q1Button.addEventListener("click", onSubmit2);
-
-function onSubmit2(e) {
+function onSubmit2() {
   secondQuestionDiv.innerHTML += `
     
     <h2 id="question-2-header">
@@ -101,6 +101,67 @@ function onSubmit2(e) {
     value="choice-d-2"
   />
   <label for="choice-d-2">parseInt()</label>
+  <br>
+  <br>
+  <button id="question-2-button" type="button" onclick="onSubmit3()" class="btn btn-light">
+        Next Question
+      </button>
+      <br>
+      <br>
+    
+    `;
+
+  firstQuestionDiv.value = "";
+}
+
+const thirdQuestionDiv = document.getElementById("third-question-div");
+console.log(thirdQuestionDiv);
+
+function onSubmit3() {
+  thirdQuestionDiv.innerHTML += `
+    
+    <h2 id="question-3-header">
+        3. How do you transform a string into an array of letters?
+      </h2>
+      <input
+        type="checkbox"
+        id="choice-a-3"
+        name="choice-a-3"
+        value="choice-a-3"
+      />
+      <label for="choice-a-3">transform()</label>
+      <br />
+      <input
+        type="checkbox"
+        id="choice-b-3"
+        name="choice-b-3"
+        value="choice-b-3"
+      />
+      <label for="choice-b-3">join()</label>
+      <br />
+      <input
+        type="checkbox"
+        id="choice-c-3"
+        name="choice-c-3"
+        value="choice-c-3"
+      />
+      <label for="choice-c-3">split()</label>
+      <br />
+      <input
+        type="checkbox"
+        id="choice-d-3"
+        name="choice-d-3"
+        value="choice-d-3"
+      />
+      <label for="choice-d-3">toUpperCase()</label>
+    <br>
+    <br>
+    <button id="question-2-button" type="button" onclick="onSubmit4()" class="btn btn-light">
+    Next Question
+  </button>
+  <br>
+  <br>
+
     
     `;
 }

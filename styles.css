@@ -1,0 +1,9 @@
+body {
+  color: aqua;
+  background-color: rgb(20, 25, 41);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  font-weight: 700;
+  margin-left: auto;
+  margin-right: auto;
+}

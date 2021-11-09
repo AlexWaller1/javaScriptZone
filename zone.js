@@ -208,12 +208,21 @@ function onSubmit4() {
       <label for="choice-c-4">HTML</label>
       <br>
       <br>
-      <button id="question-4-button" type="button" onclick="onSubmit4()" class="btn btn-light">
+      <button id="question-4-button" type="button" onclick="onSubmit5()" class="btn btn-light">
       Submit Your Challenge!
     </button>
     <br>
     <br>
     
     
+    `;
+}
+
+const finishChallengeDiv = document.getElementById("finish-challenge-div");
+console.log(finishChallengeDiv);
+
+function onSubmit5() {
+  finishChallengeDiv.innerHTML += `
+    Thank You For Taking The JavaScript Challenge!
     `;
 }

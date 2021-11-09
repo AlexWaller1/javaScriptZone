@@ -156,12 +156,64 @@ function onSubmit3() {
       <label for="choice-d-3">toUpperCase()</label>
     <br>
     <br>
-    <button id="question-2-button" type="button" onclick="onSubmit4()" class="btn btn-light">
+    <button id="question-3-button" type="button" onclick="onSubmit4()" class="btn btn-light">
     Next Question
   </button>
   <br>
   <br>
 
+    
+    `;
+}
+
+const fourthQuestionDiv = document.getElementById("fourth-question-div");
+console.log(fourthQuestionDiv);
+
+function onSubmit4() {
+  fourthQuestionDiv.innerHTML += `
+    
+    <h2 id="question-4-header">
+        4. JavaScript works with what language to change the DOM?
+      </h2>
+      <input
+        type="checkbox"
+        id="choice-a-4"
+        name="choice-a-4"
+        value="choice-a-4"
+      />
+      <label for="choice-a-4">CSS</label>
+      <br />
+      <input
+        type="checkbox"
+        id="choice-b-4"
+        name="choice-b-4"
+        value="choice-b-4"
+      />
+      <label for="choice-b-4">React</label>
+      <br />
+      <input
+        type="checkbox"
+        id="choice-c-4"
+        name="choice-c-4"
+        value="choice-c-4"
+      />
+      <label for="choice-c-4">Sinatra</label>
+      <br />
+      <input
+        type="checkbox"
+        id="choice-d-4"
+        name="choice-c-4"
+        value="choice-c-4"
+      />
+      <label for="choice-c-4">HTML</label>
+      <br>
+      <br>
+      <button id="question-4-button" type="button" onclick="onSubmit4()" class="btn btn-light">
+      Submit Your Challenge!
+    </button>
+    <br>
+    <br>
+    
     
     `;
 }

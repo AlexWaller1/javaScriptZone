@@ -67,4 +67,24 @@ function onSubmit2(e) {
   document.getElementById("a3").innerHTML = currentQuestion.a3;
   document.getElementById("a4").innerHTML = currentQuestion.a4;
   count++;
+  console.log(count);
+}
+
+const a2Button = document.getElementById("a2");
+
+a2.addEventListener("click", onSubmit3);
+
+function onSubmit3(e) {
+  let currentQuestion = questions[count];
+  let questionsP = document.getElementById("questions");
+  questionsP.innerHTML = currentQuestion.q;
+  document.getElementById("a1").innerHTML = currentQuestion.a1;
+  document.getElementById("a2").innerHTML = currentQuestion.a2;
+  document.getElementById("a3").innerHTML = currentQuestion.a3;
+  document.getElementById("a4").innerHTML = currentQuestion.a4;
+  if (count == 2) {
+    score = score + 25;
+  }
+  count++;
+  console.log(score);
 }

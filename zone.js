@@ -95,10 +95,19 @@ function onSubmit3(e) {
   document.getElementById("a2").innerHTML = currentQuestion.a2;
   document.getElementById("a3").innerHTML = currentQuestion.a3;
   document.getElementById("a4").innerHTML = currentQuestion.a4;
+  count++;
   if (count == 2) {
     score = score + 25;
+    count++;
+  } else if (count == 5) {
+    console.log("hello");
+    document.getElementById("a1").innerHTML = "";
+    document.getElementById("a2").innerHTML = "";
+    document.getElementById("a3").innerHTML = "";
+    document.getElementById("a4").innerHTML = "";
+    msg.innerHTML = `Your Score is ${score}!`;
   }
-  count++;
+
   console.log(score);
 }
 

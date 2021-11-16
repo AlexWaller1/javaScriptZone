@@ -42,6 +42,7 @@ console.log(startButton);
 // is logging the HTML to the console
 const firstQuestionDiv = document.getElementById("first-question-div");
 console.log(firstQuestionDiv);
+const msg = document.getElementById("msg1");
 
 startButton.addEventListener("click", onSubmit);
 
@@ -70,6 +71,15 @@ function onSubmit2(e) {
   document.getElementById("a3").innerHTML = currentQuestion.a3;
   document.getElementById("a4").innerHTML = currentQuestion.a4;
   count++;
+  if (count == 5) {
+    console.log("hello");
+    document.getElementById("a1").innerHTML = "";
+    document.getElementById("a2").innerHTML = "";
+    document.getElementById("a3").innerHTML = "";
+    document.getElementById("a4").innerHTML = "";
+    msg.innerHTML = `Your Score is ${score}!`;
+    count++;
+  }
   console.log(count);
 }
 
@@ -114,8 +124,6 @@ function onSubmit4(e) {
 const a4Button = document.getElementById("a4");
 
 a4Button.addEventListener("click", onSubmit5);
-
-const msg = document.getElementById("msg1");
 
 function onSubmit5(e) {
   let currentQuestion = questions[count];

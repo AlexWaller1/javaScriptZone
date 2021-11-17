@@ -70,16 +70,16 @@ function onSubmit2(e) {
   document.getElementById("a2").innerHTML = currentQuestion.a2;
   document.getElementById("a3").innerHTML = currentQuestion.a3;
   document.getElementById("a4").innerHTML = currentQuestion.a4;
-  count++;
-  if (count == 5) {
+
+  if (count == 4) {
     console.log("hello");
     document.getElementById("a1").innerHTML = "";
     document.getElementById("a2").innerHTML = "";
     document.getElementById("a3").innerHTML = "";
     document.getElementById("a4").innerHTML = "";
     msg.innerHTML = `Your Score is ${score}!`;
-    count++;
   }
+  count++;
   console.log(count);
 }
 
@@ -95,18 +95,17 @@ function onSubmit3(e) {
   document.getElementById("a2").innerHTML = currentQuestion.a2;
   document.getElementById("a3").innerHTML = currentQuestion.a3;
   document.getElementById("a4").innerHTML = currentQuestion.a4;
-  count++;
+
   if (count == 2) {
     score = score + 25;
-    count++;
-  } else if (count == 5) {
-    console.log("hello");
+  } else if (count == 4) {
     document.getElementById("a1").innerHTML = "";
     document.getElementById("a2").innerHTML = "";
     document.getElementById("a3").innerHTML = "";
     document.getElementById("a4").innerHTML = "";
     msg.innerHTML = `Your Score is ${score}!`;
   }
+  count++;
 
   console.log(score);
 }
@@ -125,8 +124,15 @@ function onSubmit4(e) {
   document.getElementById("a4").innerHTML = currentQuestion.a4;
   if (count == 1 || count == 3) {
     score = score + 25;
+  } else if (count == 4) {
+    document.getElementById("a1").innerHTML = "";
+    document.getElementById("a2").innerHTML = "";
+    document.getElementById("a3").innerHTML = "";
+    document.getElementById("a4").innerHTML = "";
+    msg.innerHTML = `Your Score is ${score}!`;
   }
   count++;
+
   console.log(score);
 }
 
@@ -138,14 +144,19 @@ function onSubmit5(e) {
   let currentQuestion = questions[count];
   let questionsP = document.getElementById("questions");
   questionsP.innerHTML = currentQuestion.q;
-  document.getElementById("a1").innerHTML = "";
-  document.getElementById("a2").innerHTML = "";
-  document.getElementById("a3").innerHTML = "";
-  document.getElementById("a4").innerHTML = "";
+  document.getElementById("a1").innerHTML = currentQuestion.a1;
+  document.getElementById("a2").innerHTML = currentQuestion.a2;
+  document.getElementById("a3").innerHTML = currentQuestion.a3;
+  document.getElementById("a4").innerHTML = currentQuestion.a4;
   if (count == 4) {
     score = score + 25;
+    document.getElementById("a1").innerHTML = "";
+    document.getElementById("a2").innerHTML = "";
+    document.getElementById("a3").innerHTML = "";
+    document.getElementById("a4").innerHTML = "";
+    msg.innerHTML = `Your Score is ${score}!`;
   }
-  msg.innerHTML = `Your Score is ${score}!`;
+  count++;
 
   console.log(score);
 }

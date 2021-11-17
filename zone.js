@@ -47,6 +47,7 @@ const msg = document.getElementById("msg1");
 startButton.addEventListener("click", onSubmit);
 
 function onSubmit(e) {
+  score = 0;
   let currentQuestion = questions[0];
   let questionsP = document.getElementById("questions");
   questionsP.innerHTML = currentQuestion.q;

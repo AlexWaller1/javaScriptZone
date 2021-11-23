@@ -47,6 +47,7 @@ console.log(startButton);
 const firstQuestionDiv = document.getElementById("first-question-div");
 console.log(firstQuestionDiv);
 const msg = document.getElementById("msg1");
+const msg2 = document.getElementById("msg2");
 
 startButton.addEventListener("click", onSubmit);
 
@@ -55,6 +56,7 @@ function onSubmit(e) {
   let currentQuestion = questions[0];
   let questionsP = document.getElementById("questions");
   questionsP.innerHTML = currentQuestion.q;
+  msg2.innerHTML = "";
   document.getElementById("a1").innerHTML = currentQuestion.a1;
   document.getElementById("a2").innerHTML = currentQuestion.a2;
   document.getElementById("a3").innerHTML = currentQuestion.a3;
@@ -71,6 +73,7 @@ a1Button.addEventListener("click", onSubmit2);
 function onSubmit2(e) {
   let currentQuestion = questions[count];
   let questionsP = document.getElementById("questions");
+  msg2.innerHTML = `That was the wrong answer!`;
   questionsP.innerHTML = currentQuestion.q;
   document.getElementById("a1").innerHTML = currentQuestion.a1;
   document.getElementById("a2").innerHTML = currentQuestion.a2;
@@ -79,7 +82,7 @@ function onSubmit2(e) {
   msg.innerHTML = `Your Current Score is ${score}!`;
 
   if (count == 4) {
-    console.log("hello");
+    msg2.innerHTML = `That was the Wrong Answer!`;
     document.getElementById("a1").innerHTML = "";
     document.getElementById("a2").innerHTML = "";
     document.getElementById("a3").innerHTML = "";
@@ -106,14 +109,16 @@ function onSubmit3(e) {
 
   if (count == 2) {
     score = score + 25;
+    msg2.innerHTML = `Correct! That was the Right Answer!`;
     msg.innerHTML = `Your Current Score is ${score}!`;
   } else if (count == 4) {
+    msg2.innerHTML = `That was the Wrong Answer!`;
     document.getElementById("a1").innerHTML = "";
     document.getElementById("a2").innerHTML = "";
     document.getElementById("a3").innerHTML = "";
     document.getElementById("a4").innerHTML = "";
     msg.innerHTML = `Your Final Score is ${score}!`;
-  }
+  } else msg2.innerHTML = `That was the Wrong Answer!`;
   count++;
 
   console.log(score);
@@ -134,14 +139,16 @@ function onSubmit4(e) {
   msg.innerHTML = `Your Current Score is ${score}!`;
   if (count == 1 || count == 3) {
     score = score + 25;
+    msg2.innerHTML = `Correct! That was the Right Answer!`;
     msg.innerHTML = `Your Current Score is ${score}!`;
   } else if (count == 4) {
+    msg2.innerHTML = `That Was the Wrong Answer!`;
     document.getElementById("a1").innerHTML = "";
     document.getElementById("a2").innerHTML = "";
     document.getElementById("a3").innerHTML = "";
     document.getElementById("a4").innerHTML = "";
     msg.innerHTML = `Your Final Score is ${score}!`;
-  }
+  } else msg2.innerHTML = `That Was the Wrong Answer!`;
   count++;
 
   console.log(score);
@@ -161,12 +168,13 @@ function onSubmit5(e) {
   document.getElementById("a4").innerHTML = currentQuestion.a4;
   if (count == 4) {
     score = score + 25;
+    msg2.innerHTML = `Correct! That was the Right Answer!`;
     document.getElementById("a1").innerHTML = "";
     document.getElementById("a2").innerHTML = "";
     document.getElementById("a3").innerHTML = "";
     document.getElementById("a4").innerHTML = "";
     msg.innerHTML = `Your Final Score is ${score}!`;
-  }
+  } else msg.innerHTML = `That was the Wrong Answer!`;
   count++;
 
   console.log(score);

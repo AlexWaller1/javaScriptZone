@@ -174,7 +174,7 @@ function onSubmit5(e) {
     document.getElementById("a3").innerHTML = "";
     document.getElementById("a4").innerHTML = "";
     msg.innerHTML = `Your Final Score is ${score}!`;
-  } else msg.innerHTML = `That was the Wrong Answer!`;
+  } else msg2.innerHTML = `That was the Wrong Answer!`;
   count++;
 
   console.log(score);

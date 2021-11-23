@@ -1,5 +1,9 @@
 console.log("Hello Oa");
 
+// add a timer
+// show score as we go
+// confirmation for right or wrong answers
+
 let score = 0;
 let count = 0;
 
@@ -55,6 +59,7 @@ function onSubmit(e) {
   document.getElementById("a2").innerHTML = currentQuestion.a2;
   document.getElementById("a3").innerHTML = currentQuestion.a3;
   document.getElementById("a4").innerHTML = currentQuestion.a4;
+  msg.innerHTML = `Your Current Score is ${score}!`;
   count = 1;
   console.log(count);
 }
@@ -71,6 +76,7 @@ function onSubmit2(e) {
   document.getElementById("a2").innerHTML = currentQuestion.a2;
   document.getElementById("a3").innerHTML = currentQuestion.a3;
   document.getElementById("a4").innerHTML = currentQuestion.a4;
+  msg.innerHTML = `Your Current Score is ${score}!`;
 
   if (count == 4) {
     console.log("hello");
@@ -78,7 +84,7 @@ function onSubmit2(e) {
     document.getElementById("a2").innerHTML = "";
     document.getElementById("a3").innerHTML = "";
     document.getElementById("a4").innerHTML = "";
-    msg.innerHTML = `Your Score is ${score}!`;
+    msg.innerHTML = `Your Final Score is ${score}!`;
   }
   count++;
   console.log(count);
@@ -96,15 +102,17 @@ function onSubmit3(e) {
   document.getElementById("a2").innerHTML = currentQuestion.a2;
   document.getElementById("a3").innerHTML = currentQuestion.a3;
   document.getElementById("a4").innerHTML = currentQuestion.a4;
+  msg.innerHTML = `Your Current Score is ${score}!`;
 
   if (count == 2) {
     score = score + 25;
+    msg.innerHTML = `Your Current Score is ${score}!`;
   } else if (count == 4) {
     document.getElementById("a1").innerHTML = "";
     document.getElementById("a2").innerHTML = "";
     document.getElementById("a3").innerHTML = "";
     document.getElementById("a4").innerHTML = "";
-    msg.innerHTML = `Your Score is ${score}!`;
+    msg.innerHTML = `Your Final Score is ${score}!`;
   }
   count++;
 
@@ -123,14 +131,16 @@ function onSubmit4(e) {
   document.getElementById("a2").innerHTML = currentQuestion.a2;
   document.getElementById("a3").innerHTML = currentQuestion.a3;
   document.getElementById("a4").innerHTML = currentQuestion.a4;
+  msg.innerHTML = `Your Current Score is ${score}!`;
   if (count == 1 || count == 3) {
     score = score + 25;
+    msg.innerHTML = `Your Current Score is ${score}!`;
   } else if (count == 4) {
     document.getElementById("a1").innerHTML = "";
     document.getElementById("a2").innerHTML = "";
     document.getElementById("a3").innerHTML = "";
     document.getElementById("a4").innerHTML = "";
-    msg.innerHTML = `Your Score is ${score}!`;
+    msg.innerHTML = `Your Final Score is ${score}!`;
   }
   count++;
 
@@ -155,7 +165,7 @@ function onSubmit5(e) {
     document.getElementById("a2").innerHTML = "";
     document.getElementById("a3").innerHTML = "";
     document.getElementById("a4").innerHTML = "";
-    msg.innerHTML = `Your Score is ${score}!`;
+    msg.innerHTML = `Your Final Score is ${score}!`;
   }
   count++;
 

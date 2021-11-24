@@ -180,23 +180,30 @@ function onSubmit5(e) {
   console.log(score);
 }
 
-let minutes = 4;
+let minutes = 1;
 let seconds = 60;
 
 setInterval(function () {
   if (minutes == 0 && seconds == 1) {
     document.getElementById("countdown-timer").innerHTML = "00.00";
+    document.getElementById("a1").innerHTML = "";
+    document.getElementById("a2").innerHTML = "";
+    document.getElementById("a3").innerHTML = "";
+    document.getElementById("a4").innerHTML = "";
+    msg2.innerHTML = `Time's Up!`;
   } else {
     seconds--;
     if (seconds == 0) {
       minutes--;
       seconds = 60;
-
-      if (minutes == 0) {
-        minutes = minutes;
-      }
     }
-    document.getElementById("countdown-timer").innerHTML =
-      minutes + ":" + seconds;
+    if (seconds < 10) {
+      document.getElementById("countdown-timer").innerHTML = `
+        ${minutes}: 0${seconds}`;
+    } else {
+      document.getElementById(
+        "countdown-timer"
+      ).innerHTML = `${minutes}: ${seconds}`;
+    }
   }
 }, 1000);

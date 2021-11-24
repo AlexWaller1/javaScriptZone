@@ -179,3 +179,24 @@ function onSubmit5(e) {
 
   console.log(score);
 }
+
+let minutes = 4;
+let seconds = 60;
+
+setInterval(function () {
+  if (minutes == 0 && seconds == 1) {
+    document.getElementById("countdown-timer").innerHTML = "00.00";
+  } else {
+    seconds--;
+    if (seconds == 0) {
+      minutes--;
+      seconds = 60;
+
+      if (minutes == 0) {
+        minutes = minutes;
+      }
+    }
+    document.getElementById("countdown-timer").innerHTML =
+      minutes + ":" + seconds;
+  }
+}, 1000);

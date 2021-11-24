@@ -185,7 +185,7 @@ let seconds = 60;
 
 setInterval(function () {
   if (minutes == 0 && seconds == 1) {
-    document.getElementById("countdown-timer").innerHTML = "00.00";
+    document.getElementById("countdown-timer").innerHTML = "00:00";
     document.getElementById("a1").innerHTML = "";
     document.getElementById("a2").innerHTML = "";
     document.getElementById("a3").innerHTML = "";
@@ -197,6 +197,7 @@ setInterval(function () {
       minutes--;
       seconds = 60;
     }
+
     if (seconds < 10) {
       document.getElementById("countdown-timer").innerHTML = `
         ${minutes}: 0${seconds}`;
@@ -205,5 +206,9 @@ setInterval(function () {
         "countdown-timer"
       ).innerHTML = `${minutes}: ${seconds}`;
     }
+  }
+  if (seconds == 60 && minutes < 2) {
+    document.getElementById("countdown-timer").innerHTML = `
+    1: 00`;
   }
 }, 1000);
